@@ -1,0 +1,4 @@
+services:
+  bun:
+    build:
+      target: production
