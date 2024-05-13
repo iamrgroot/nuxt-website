@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const route = useRoute()
+const route = useRoute();
 
-const title = 'Hi! 👋';
-const description = 'I am (Robert) Groot';
-const image = '/seo-image.png';
+const title = "Hi! 👋";
+const description = "I am (Robert) Groot";
+const image = "/seo-image.png";
 
 useSeoMeta({
   title: title,
@@ -15,23 +15,28 @@ useSeoMeta({
   twitterTitle: title,
   twitterDescription: description,
   twitterImage: image,
-  twitterCard: 'summary'
-})
+  twitterCard: "summary",
+});
 
 useHead({
   htmlAttrs: {
-    lang: 'en'
+    lang: "en",
   },
   link: [
     {
-      rel: 'icon',
-      type: 'image/png',
-      href: '/favicon.ico'
-    }
-  ]
-})
+      rel: "icon",
+      type: "image/png",
+      href: "/favicon.ico",
+    },
+  ],
+});
 
-const { status, data } = await useFetch('/api/records');
+const { status: recordsStatus, data: recordsData } = await useFetch(
+  "/api/records"
+);
+const { status: cyclingStatus, data: cyclingData } = await useFetch(
+  "/api/cycling"
+);
 </script>
 
 <template>
@@ -47,12 +52,13 @@ const { status, data } = await useFetch('/api/records');
         image-url="https://paqt.com/assets/uploads/fbrfg/favicon-32x32.png"
         text="PAQT.com"
       />
-      and I am mainly working with 
+      and I am mainly working with
       <ExternalImageButton
         href="https://laravel.com"
         image-url="https://laravel.com/img/favicon/favicon-32x32.png"
         text="Laravel"
-      /> and
+      />
+      and
       <ExternalImageButton
         href="https://vuejs.org"
         image-url="https://vuejs.org/logo.svg"
@@ -62,7 +68,13 @@ const { status, data } = await useFetch('/api/records');
     </p>
     <p>
       <Icon size="24" name="icon-park-solid:collection-records" />
-      {{ status === 'pending' ? '...' : data?.discogsReleasesCount }}
+      {{
+        recordsStatus === "pending" ? "..." : recordsData?.discogsReleasesCount
+      }}
+    </p>
+    <p>
+      <Icon size="24" name="akar-icons:bicycle" />
+      {{ cyclingStatus === "pending" ? "..." : cyclingData?.rideTotal }}
     </p>
   </div>
 </template>

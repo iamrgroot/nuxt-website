@@ -1,6 +1,13 @@
-FROM oven/bun as base
+FROM oven/bun:latest as base
 
 WORKDIR /app
+
+RUN apt update && \
+    apt install -y zip && \
+    apt clean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN bun upgrade
 
 # 
 # Local dev image
@@ -22,6 +29,6 @@ FROM base as production
 COPY . /app
 
 RUN bun install
-RUN bun run build
+RUN bun -b run build
 
 CMD [ "bun", ".output/server/index.mjs" ]
