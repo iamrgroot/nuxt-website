@@ -50,13 +50,13 @@ Just use the `Dockerfile` :)
 Build the application for production:
 
 ```bash
-bun run -b build --preset=bun
+bun run build
 ```
 
 Locally preview production build:
 
 ```bash
-bun run -b preview
+bun run preview
 ```
 
 Run production build:

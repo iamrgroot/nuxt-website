@@ -26,6 +26,7 @@ defineProps<{
       <NuxtImg
         :src="imageUrl"
         :width="14"
+        :height="14"
         alt=""
         class="mr-2"
         placeholder

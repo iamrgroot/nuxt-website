@@ -37,6 +37,9 @@ const { status: recordsStatus, data: recordsData } = await useFetch(
 const { status: cyclingStatus, data: cyclingData } = await useFetch(
   "/api/cycling"
 );
+const formattedCyclingData = computed(() =>
+  cyclingData.value ? $n(cyclingData.value.rideTotal / 1000, "distance") : null
+);
 </script>
 
 <template>
@@ -74,7 +77,7 @@ const { status: cyclingStatus, data: cyclingData } = await useFetch(
     </p>
     <p>
       <Icon size="24" name="akar-icons:bicycle" />
-      {{ cyclingStatus === "pending" ? "..." : cyclingData?.rideTotal }}
+      {{ cyclingStatus === "pending" ? "..." : formattedCyclingData }}
     </p>
   </div>
 </template>

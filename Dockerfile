@@ -29,6 +29,6 @@ FROM base as production
 COPY . /app
 
 RUN bun install
-RUN bun -b run build
+RUN bun run build
 
 CMD [ "bun", ".output/server/index.mjs" ]
