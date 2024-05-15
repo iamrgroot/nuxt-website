@@ -51,7 +51,7 @@ const formattedCyclingData = computed(() =>
     <p>
       I'm Robert, a full stack developer at
       <ExternalImageButton
-        href="https://pabunqt.com"
+        href="https://paqt.com"
         image-url="https://paqt.com/assets/uploads/fbrfg/favicon-32x32.png"
         text="PAQT.com"
       />
