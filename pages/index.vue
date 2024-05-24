@@ -30,54 +30,16 @@ useHead({
     },
   ],
 });
-
-const { status: recordsStatus, data: recordsData } = await useFetch(
-  "/api/records"
-);
-const { status: cyclingStatus, data: cyclingData } = await useFetch(
-  "/api/cycling"
-);
-const formattedCyclingData = computed(() =>
-  cyclingData.value ? $n(cyclingData.value.rideTotal / 1000, "distance") : null
-);
 </script>
 
 <template>
-  <div class="max-w-lg mt-8">
-    <h1 class="text-3xl">
+  <div class="max-w-lg mt-8 pt-12">
+    <h1 class="flex justify-between mb-4 text-3xl">
       Hi! 👋
-      <ToggleDarkButton />
+      <ToggleDarkIcon />
     </h1>
-    <p>
-      I'm Robert, a full stack developer at
-      <ExternalImageButton
-        href="https://paqt.com"
-        image-url="https://paqt.com/assets/uploads/fbrfg/favicon-32x32.png"
-        text="PAQT.com"
-      />
-      and I am mainly working with
-      <ExternalImageButton
-        href="https://laravel.com"
-        image-url="https://laravel.com/img/favicon/favicon-32x32.png"
-        text="Laravel"
-      />
-      and
-      <ExternalImageButton
-        href="https://vuejs.org"
-        image-url="https://vuejs.org/logo.svg"
-        text="VueJS"
-      />
-      .
-    </p>
-    <p>
-      <Icon size="24" name="icon-park-solid:collection-records" />
-      {{
-        recordsStatus === "pending" ? "..." : recordsData?.discogsReleasesCount
-      }}
-    </p>
-    <p>
-      <Icon size="24" name="akar-icons:bicycle" />
-      {{ cyclingStatus === "pending" ? "..." : formattedCyclingData }}
-    </p>
+    <AboutMeText class="mb-12" />
+    <RecordsStats />
+    <CylcingStats />
   </div>
 </template>
