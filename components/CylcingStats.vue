@@ -8,7 +8,7 @@ const formattedCyclingData = computed(() =>
 
 <template>
   <p>
-    <TextTooltip>
+    <TextPopover>
       <template #trigger>
         <span>
           <Icon size="24" name="akar-icons:bicycle" title="Bicycle icon" />
@@ -16,6 +16,6 @@ const formattedCyclingData = computed(() =>
         </span>
       </template>
       <template #text> Total cycling distance </template>
-    </TextTooltip>
+    </TextPopover>
   </p>
 </template>
