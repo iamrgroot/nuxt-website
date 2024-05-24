@@ -22,4 +22,9 @@ export default defineNuxtConfig({
     vueI18n: "./lib/i18n.ts",
     experimental: { autoImportTranslationFunctions: true },
   },
+  app: {
+    head: {
+      script: [{ src: "/darkmode.js" }],
+    },
+  },
 });

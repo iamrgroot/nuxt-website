@@ -33,7 +33,7 @@ useHead({
 </script>
 
 <template>
-  <div class="max-w-lg mt-8 pt-12">
+  <div class="max-w-lg mt-8 pt-12 px-8">
     <h1 class="flex justify-between mb-4 text-3xl">
       Hi! 👋
       <ToggleDarkIcon />
