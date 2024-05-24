@@ -4,7 +4,7 @@ const { status, data } = await useFetch("/api/records");
 
 <template>
   <p>
-    <TextPopover>
+    <TextTooltip>
       <template #trigger>
         <span>
           <Icon
@@ -16,6 +16,6 @@ const { status, data } = await useFetch("/api/records");
         </span>
       </template>
       <template #text> Number of records owned </template>
-    </TextPopover>
+    </TextTooltip>
   </p>
 </template>
