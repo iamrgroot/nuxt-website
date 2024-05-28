@@ -1,5 +1,5 @@
 <template>
-  <p>
+  <p class="font-thin">
     Reach me on
     <ImageButton
       href="https://github.com/iamrgroot"

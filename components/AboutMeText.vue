@@ -1,5 +1,5 @@
 <template>
-  <p class="font-thin">
+  <p>
     I'm Robert, a full stack developer at
     <ImageButton href="https://paqt.com" image="/paqt.png" text="PAQT.com" />
     and I am mainly working with
