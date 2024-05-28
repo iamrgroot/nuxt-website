@@ -29,7 +29,7 @@ services:
       target: local
     labels:
       traefik.enable: true
-      traefik.http.routers.rgroot-bun.rule: Host(`rgroot.paqt.dev`)
+      traefik.http.routers.rgroot-bun.rule: Host(`rgroot.localhost`)
       traefik.http.routers.rgroot-bun.entrypoints: web,websecure
       traefik.http.services.rgroot-bun.loadbalancer.server.port: 3000
     networks:

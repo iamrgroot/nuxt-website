@@ -19,7 +19,7 @@ RUN apt update && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
-CMD [ "tail", "-f", "/dev/null" ]
+CMD bun install && bun run dev
 
 # 
 # Production image
@@ -31,4 +31,4 @@ COPY . /app
 RUN bun install
 RUN bun run build
 
-CMD [ "bun", ".output/server/index.mjs" ]
+CMD bun .output/server/index.mjs

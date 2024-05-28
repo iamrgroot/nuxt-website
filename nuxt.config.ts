@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxt/image",
     "@nuxtjs/i18n",
+    "@nuxtjs/robots",
   ],
   runtimeConfig: {
     discogsUser: "",
@@ -24,6 +25,9 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      htmlAttrs: {
+        lang: "en",
+      },
       script: [{ src: "/darkmode.js" }],
     },
   },
