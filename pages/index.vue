@@ -7,5 +7,6 @@
     <AboutMeText class="mb-12" />
     <RecordsStats />
     <CylcingStats />
+    <Contact class="mt-12" />
   </div>
 </template>

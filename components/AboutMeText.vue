@@ -1,23 +1,11 @@
 <template>
-  <p>
+  <p class="font-thin">
     I'm Robert, a full stack developer at
-    <ExternalImageButton
-      href="https://paqt.com"
-      image-url="/paqt.png"
-      text="PAQT.com"
-    />
+    <ImageButton href="https://paqt.com" image="/paqt.png" text="PAQT.com" />
     and I am mainly working with
-    <ExternalImageButton
-      href="https://laravel.com"
-      image-url="/laravel.png"
-      text="Laravel"
-    />
+    <ImageButton href="https://laravel.com" icon="mdi:laravel" text="Laravel" />
     and
-    <ExternalImageButton
-      href="https://vuejs.org"
-      image-url="/vue.svg"
-      text="VueJS"
-    />
+    <ImageButton href="https://vuejs.org" icon="mdi:vuejs" text="VueJS" />
     .
   </p>
 </template>
