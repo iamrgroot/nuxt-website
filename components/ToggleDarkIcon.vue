@@ -12,6 +12,11 @@ const toggleDark = useToggle(isDark);
     class="px-2"
     @click="toggleDark()"
   >
-    <Icon size="24" name="material-symbols:dark-mode" />
+    <Icon
+      size="24"
+      :name="
+        isDark ? 'material-symbols:light-mode' : 'material-symbols:dark-mode'
+      "
+    />
   </Button>
 </template>
