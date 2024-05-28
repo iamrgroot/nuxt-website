@@ -1,3 +1,5 @@
+import { emojiToSvg } from "./utils/svgEmoji";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -29,6 +31,7 @@ export default defineNuxtConfig({
         lang: "en",
       },
       script: [{ src: "/darkmode.js" }],
+      link: [{ rel: "icon", href: emojiToSvg("👋") }],
     },
   },
 });
