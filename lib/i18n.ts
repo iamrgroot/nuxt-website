@@ -10,4 +10,17 @@ export default defineI18nConfig(() => ({
       },
     },
   },
+  messages: {
+    en: {
+      buttons: {
+        submit: "Submit",
+        reset: "Reset",
+        back: "Back",
+      },
+      spotify: {
+        clientId: "Spotify Client ID",
+        currentToken: "Current token",
+      },
+    },
+  },
 }));

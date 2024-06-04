@@ -1,12 +1,14 @@
+<script setup lang="ts">
+defineRouteRules({
+  ssr: true,
+  isr: true,
+});
+</script>
+
 <template>
-  <div class="max-w-lg mt-8 pt-12 px-8">
-    <h1 class="flex justify-between mb-4 text-3xl">
-      Hi! 👋
-      <ToggleDarkIcon />
-    </h1>
-    <AboutMeText class="mb-12" />
-    <RecordsStats />
-    <CylcingStats />
-    <Contact class="mt-12" />
-  </div>
+  <AboutMeText class="mb-12" />
+  <RecordsStats />
+  <CylcingStats />
+  <MusicStats />
+  <Contact class="mt-12" />
 </template>

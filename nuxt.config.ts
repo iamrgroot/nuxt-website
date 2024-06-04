@@ -5,6 +5,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   nitro: {
     preset: "bun",
+    storage: {
+      file: {
+        driver: "fsLite",
+        base: "./server/storage",
+      },
+    },
+  },
+  experimental: {
+    inlineRouteRules: true,
   },
   modules: [
     "@nuxtjs/tailwindcss",
@@ -14,12 +23,16 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/robots",
   ],
+  css: ["~/assets/css/main.css"],
   runtimeConfig: {
     discogsUser: "",
     discogsToken: "",
     stravaClientId: "",
     stravaClientSecret: "",
     stravaRefreshToken: "",
+    public: {
+      spotifyEnableAuth: false,
+    },
   },
   i18n: {
     vueI18n: "./lib/i18n.ts",

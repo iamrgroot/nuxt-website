@@ -12,7 +12,9 @@
   "dependencies": {
     "@nuxt/image": "^1.6.0",
     "@radix-icons/vue": "^1.0.0",
-    "@vueuse/core": "^10.9.0",
+    "@spotify/web-api-ts-sdk": "^1.2.0",
+    "@vee-validate/zod": "^4.13.0",
+    "@vueuse/core": "^10.10.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "nuxt": "^3.11.2",
@@ -21,8 +23,10 @@
     "strava": "^2.3.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
+    "vee-validate": "^4.13.0",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@nuxtjs/i18n": "^8.3.1",
