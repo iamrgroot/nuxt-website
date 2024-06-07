@@ -9,7 +9,7 @@ const formattedCyclingData = computed(() =>
 <template>
   <p>
     <Icon size="24" name="akar-icons:bicycle" title="Bicycle icon" />
-    {{ status === "pending" ? "..." : formattedCyclingData }}
+    {{ status !== "success" ? "..." : formattedCyclingData }}
     cycled in total
   </p>
 </template>

@@ -6,7 +6,7 @@ const { status, data } = await useFetch("/api/music");
   <p>
     <Icon size="24" name="mdi:spotify" title="Spotify icon" />
     Lately listening to
-    <template v-if="status === 'pending'">...</template>
+    <template v-if="status !== 'success'">...</template>
     <a v-else-if="data" class="underline" :href="data.external_urls.spotify">{{
       data.name
     }}</a>

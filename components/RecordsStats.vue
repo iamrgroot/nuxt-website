@@ -9,7 +9,7 @@ const { status, data } = await useFetch("/api/records");
       name="icon-park-solid:collection-records"
       title="Music record icon"
     />
-    {{ status === "pending" ? "..." : data?.discogsReleasesCount }}
+    {{ status !== "success" ? "..." : data?.discogsReleasesCount }}
     physical records owned
   </p>
 </template>
