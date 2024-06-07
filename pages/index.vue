@@ -7,8 +7,8 @@ defineRouteRules({
 
 <template>
   <AboutMeText class="mb-12" />
-  <RecordsStats />
-  <CylcingStats />
-  <MusicStats />
+  <MusicStats class="mb-1" />
+  <RecordsStats class="mb-1" />
+  <CylcingStats class="mb-1" />
   <Contact class="mt-12" />
 </template>

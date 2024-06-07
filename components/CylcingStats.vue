@@ -8,14 +8,8 @@ const formattedCyclingData = computed(() =>
 
 <template>
   <p>
-    <TextTooltip>
-      <template #trigger>
-        <span>
-          <Icon size="24" name="akar-icons:bicycle" title="Bicycle icon" />
-          {{ status === "pending" ? "..." : formattedCyclingData }}
-        </span>
-      </template>
-      <template #text> Total cycling distance </template>
-    </TextTooltip>
+    <Icon size="24" name="akar-icons:bicycle" title="Bicycle icon" />
+    {{ status === "pending" ? "..." : formattedCyclingData }}
+    cycled in total
   </p>
 </template>

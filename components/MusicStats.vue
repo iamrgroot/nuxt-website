@@ -4,20 +4,11 @@ const { status, data } = await useFetch("/api/music");
 
 <template>
   <p>
-    <TextTooltip>
-      <template #trigger>
-        <span>
-          <Icon size="24" name="mdi:spotify" title="Spotify icon" />
-          <template v-if="status === 'pending'">...</template>
-          <a
-            v-else-if="data"
-            class="underline ml-1"
-            :href="data.external_urls.spotify"
-            >{{ data.name }}</a
-          >
-        </span>
-      </template>
-      <template #text> Most listened artist </template>
-    </TextTooltip>
+    <Icon size="24" name="mdi:spotify" title="Spotify icon" />
+    Lately listening to
+    <template v-if="status === 'pending'">...</template>
+    <a v-else-if="data" class="underline" :href="data.external_urls.spotify">{{
+      data.name
+    }}</a>
   </p>
 </template>
