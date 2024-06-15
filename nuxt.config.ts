@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     compressPublicAssets: true,
     prerender: {
       crawlLinks: true,
+      ignore: ["spotify-auth"],
     },
   },
   experimental: {
