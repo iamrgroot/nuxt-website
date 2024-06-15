@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         base: "./server/storage",
       },
     },
-    compressPublicAssets: true,
+    // compressPublicAssets: true,
   },
   experimental: {
     inlineRouteRules: true,
