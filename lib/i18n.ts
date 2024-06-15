@@ -12,6 +12,7 @@ export default defineI18nConfig(() => ({
   },
   messages: {
     en: {
+      and: "and",
       buttons: {
         submit: "Submit",
         reset: "Reset",

@@ -17,10 +17,10 @@ export default defineCachedEventHandler(
     const topItems = await authenticatedSpotify.currentUser.topItems(
       "artists",
       "medium_term",
-      1
+      3
     );
 
-    return topItems.items[0];
+    return topItems.items;
   },
   { maxAge: 60 * 60 }
 );

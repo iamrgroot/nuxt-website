@@ -7,9 +7,16 @@ const formattedCyclingData = computed(() =>
 </script>
 
 <template>
-  <p>
-    <Icon size="24" name="akar-icons:bicycle" title="Bicycle icon" />
-    {{ status !== "success" ? "..." : formattedCyclingData }}
-    cycled in total
-  </p>
+  <div class="flex items-center">
+    <Icon
+      size="24"
+      name="akar-icons:bicycle"
+      title="Bicycle icon"
+      class="mr-2"
+    />
+    <span>
+      {{ status !== "success" ? "..." : formattedCyclingData }}
+      cycled in total
+    </span>
+  </div>
 </template>

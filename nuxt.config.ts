@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     stravaClientId: "",
     stravaClientSecret: "",
     stravaRefreshToken: "",
+    duolingoUserId: "",
     public: {
       spotifyEnableAuth: false,
     },
