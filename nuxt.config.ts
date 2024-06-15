@@ -11,6 +11,10 @@ export default defineNuxtConfig({
         base: "./server/storage",
       },
     },
+    compressPublicAssets: true,
+    prerender: {
+      crawlLinks: true,
+    },
   },
   experimental: {
     inlineRouteRules: true,
