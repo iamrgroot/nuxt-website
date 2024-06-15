@@ -31,9 +31,9 @@ export default defineNuxtConfig({
     stravaClientSecret: "",
     stravaRefreshToken: "",
     duolingoUserId: "",
-    public: {
-      spotifyEnableAuth: false,
-    },
+    spotifyClient: "",
+    spotifyAccessToken: "",
+    spotifyRefreshToken: "",
   },
   i18n: {
     vueI18n: "./lib/i18n.ts",

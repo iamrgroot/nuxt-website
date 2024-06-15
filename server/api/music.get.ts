@@ -1,17 +1,29 @@
 import { SpotifyApi } from "@spotify/web-api-ts-sdk";
-import { getSpotifyAuth } from "~/utils/spotifyAuthStorage";
 
 export default defineCachedEventHandler(
   async () => {
-    const auth = await getSpotifyAuth();
-
-    if (!auth) {
-      throw new Error(`No token found. Visit /spotify-auth to get one.`);
-    }
+    const { spotifyClient, spotifyAccessToken, spotifyRefreshToken } =
+      useRuntimeConfig();
 
     const authenticatedSpotify = SpotifyApi.withAccessToken(
-      auth.clientId,
-      auth.token
+      spotifyClient,
+      // {
+      //   access_token:
+      //     "",
+      //   token_type: "Bearer",
+      //   expires_in: 3600,
+      //   refresh_token:
+      //     "",
+      //   // scope:
+      //   //   "user-read-currently-playing user-read-recently-played user-top-read",
+      //   expires: 1718485038526,
+      // }
+      {
+        access_token: spotifyAccessToken,
+        refresh_token: spotifyRefreshToken,
+        expires_in: 3600,
+        token_type: "Bearer",
+      }
     );
 
     const topItems = await authenticatedSpotify.currentUser.topItems(
