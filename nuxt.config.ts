@@ -31,8 +31,8 @@ export default defineNuxtConfig({
     stravaClientSecret: "",
     stravaRefreshToken: "",
     duolingoUserId: "",
-    spotifyClient: "",
-    spotifyAccessToken: "",
+    spotifyClientId: "",
+    spotifyClientSecret: "",
     spotifyRefreshToken: "",
   },
   i18n: {
