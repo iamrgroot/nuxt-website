@@ -11,6 +11,16 @@ export default defineNuxtConfig({
         base: "./server/storage",
       },
     },
+    compressPublicAssets: true,
+    prerender: {
+      crawlLinks: true,
+    },
+  },
+  hooks: {
+    // Fix for hanging build step
+    close: (nuxt) => {
+      if (!nuxt.options._prepare) process.exit();
+    },
   },
   experimental: {
     inlineRouteRules: true,
