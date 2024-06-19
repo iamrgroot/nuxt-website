@@ -12,7 +12,7 @@ const formattedCyclingData = computed(() =>
       size="24"
       name="akar-icons:bicycle"
       title="Bicycle icon"
-      class="mr-2"
+      class="min-w-fit mr-2"
     />
     <span>
       {{ status !== "success" ? "..." : formattedCyclingData }}

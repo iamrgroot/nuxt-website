@@ -8,7 +8,7 @@ const { status, data } = await useFetch("/api/records");
       size="24"
       name="icon-park-solid:collection-records"
       title="Music record icon"
-      class="mr-2"
+      class="min-w-fit mr-2"
     />
     <span>
       {{ status !== "success" ? "..." : data?.discogsReleasesCount }}

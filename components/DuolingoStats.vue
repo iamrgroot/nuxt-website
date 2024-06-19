@@ -8,7 +8,7 @@ const { status, data } = await useFetch("/api/duolingo");
       size="24"
       name="simple-icons:duolingo"
       title="Duolingo icon"
-      class="mr-2"
+      class="min-w-fit mr-2"
     />
     <span>
       Duolingo streak of

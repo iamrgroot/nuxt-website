@@ -4,7 +4,12 @@ const { status, data } = await useFetch("/api/music");
 
 <template>
   <div class="flex items-center">
-    <Icon size="24" name="mdi:spotify" title="Spotify icon" class="mr-2" />
+    <Icon
+      size="24"
+      name="mdi:spotify"
+      title="Spotify icon"
+      class="min-w-fit mr-2"
+    />
     <span>
       Lately listening to
       <span v-if="status !== 'success'">...</span>
