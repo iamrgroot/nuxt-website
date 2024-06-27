@@ -1,6 +1,4 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Nuxt website
 
 ## Setup
 
@@ -25,20 +23,11 @@ Example `docker-compose.override.yml` with traefik:
 ```yml
 services:
   bun:
-    build:
-      target: local
     labels:
       traefik.enable: true
-      traefik.http.routers.rgroot-bun.rule: Host(`rgroot.localhost`)
-      traefik.http.routers.rgroot-bun.entrypoints: web,websecure
-      traefik.http.services.rgroot-bun.loadbalancer.server.port: 3000
-    networks:
-      - application
-    volumes:
-      - ./:/app
-
-networks:
-  application:
+      traefik.http.routers.bun.rule: Host(`bun.localhost`)
+      traefik.http.routers.bun.entrypoints: web,websecure
+      traefik.http.services.bun.loadbalancer.server.port: 3000
 ```
 
 ## Production
@@ -51,12 +40,6 @@ Build the application for production:
 
 ```bash
 bun run build
-```
-
-Locally preview production build:
-
-```bash
-bun run preview
 ```
 
 Run production build:

@@ -1,4 +1,4 @@
-import { incrementClicksCounter } from "~/lib/redis";
+import { incrementClicksCounter } from "@@/server/lib/redis";
 
 const clients: ReturnType<typeof createEventStream>[] = [];
 

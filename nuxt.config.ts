@@ -1,39 +1,7 @@
-import { emojiToSvg } from "./utils/svgEmoji";
+import { emojiToSvg } from "./shared/svgEmoji";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  nitro: {
-    preset: "bun",
-    storage: {
-      file: {
-        driver: "fsLite",
-        base: "./server/storage",
-      },
-    },
-    compressPublicAssets: true,
-    prerender: {
-      crawlLinks: true,
-    },
-  },
-  hooks: {
-    // Fix for hanging build step
-    close: (nuxt) => {
-      if (!nuxt.options._prepare) process.exit();
-    },
-  },
-  experimental: {
-    inlineRouteRules: true,
-  },
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "shadcn-nuxt",
-    "nuxt-icon",
-    "@nuxt/image",
-    "@nuxtjs/i18n",
-    "@nuxtjs/robots",
-  ],
-  css: ["~/assets/css/main.css"],
   runtimeConfig: {
     discogsUser: "",
     discogsToken: "",
@@ -45,9 +13,18 @@ export default defineNuxtConfig({
     spotifyClientSecret: "",
     spotifyRefreshToken: "",
   },
-  i18n: {
-    vueI18n: "./lib/i18n.ts",
-    experimental: { autoImportTranslationFunctions: true },
+  future: {
+    compatibilityVersion: 4,
+  },
+  experimental: {
+    inlineRouteRules: true,
+  },
+  nitro: {
+    preset: "bun",
+    compressPublicAssets: true,
+    prerender: {
+      crawlLinks: true,
+    },
   },
   app: {
     head: {
@@ -57,5 +34,27 @@ export default defineNuxtConfig({
       script: [{ src: "/darkmode.js" }],
       link: [{ rel: "icon", href: emojiToSvg("👋") }],
     },
+  },
+  css: ["@/assets/css/main.css"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "shadcn-nuxt",
+    "nuxt-icon",
+    "@nuxt/image",
+    "@nuxtjs/i18n",
+    "@nuxtjs/robots",
+  ],
+  hooks: {
+    // Fix for hanging build step
+    close: (nuxt) => {
+      if (!nuxt.options._prepare) process.exit();
+    },
+  },
+  i18n: {
+    vueI18n: "./app/utils/i18n.config.ts",
+    experimental: { autoImportTranslationFunctions: true },
+  },
+  shadcn: {
+    componentDir: "./app/components/ui",
   },
 });

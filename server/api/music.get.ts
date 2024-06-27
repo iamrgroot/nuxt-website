@@ -1,5 +1,5 @@
 import { SpotifyApi } from "@spotify/web-api-ts-sdk";
-import { RefreshTokenStrategy } from "~/lib/spotify-auth";
+import { RefreshTokenStrategy } from "@@/server/lib/spotify-auth";
 
 export default defineCachedEventHandler(
   async () => {

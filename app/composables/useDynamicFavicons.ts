@@ -1,5 +1,5 @@
 import { useFavicon } from "@vueuse/core";
-import { emojiToSvg } from "../utils/svgEmoji";
+import { emojiToSvg } from "@@/shared/svgEmoji";
 
 export const useDynamicFavicons = () => {
   const iconMap = {
