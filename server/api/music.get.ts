@@ -16,7 +16,7 @@ export default defineCachedEventHandler(
 
     const topItems = await authenticatedSpotify.currentUser.topItems(
       "artists",
-      "medium_term",
+      "short_term",
       3
     );
 
