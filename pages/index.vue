@@ -12,4 +12,5 @@ defineRouteRules({
   <DuolingoStats class="mb-2" />
   <CylcingStats class="mb-2" />
   <Contact class="mt-12" />
+  <ClicksStats class="mt-2" />
 </template>

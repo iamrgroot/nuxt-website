@@ -18,14 +18,15 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "nuxt": "^3.12.2",
-    "radix-vue": "^1.8.3",
+    "radix-vue": "^1.8.5",
+    "redis": "^4.6.14",
     "shadcn-nuxt": "^0.10.4",
     "strava": "^2.3.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "vee-validate": "^4.13.1",
-    "vue": "^3.4.29",
-    "vue-router": "^4.3.3",
+    "vue": "^3.4.30",
+    "vue-router": "^4.4.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
@@ -33,6 +34,6 @@
     "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "nuxt-icon": "^0.6.10",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.2"
   }
 }

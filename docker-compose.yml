@@ -2,3 +2,15 @@ services:
   bun:
     build:
       target: production
+    networks:
+      - application
+
+  redis:
+    image: redis
+    networks:
+      - application
+    volumes:
+      - redis:/data
+
+networks:
+  application:
