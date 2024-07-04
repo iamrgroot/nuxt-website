@@ -1,4 +1,4 @@
-FROM oven/bun:latest as base
+FROM oven/bun:latest AS base
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ RUN bun upgrade
 # 
 # Local dev image
 # 
-FROM base as local
+FROM base AS local
 
 RUN apt update && \
     apt install -y gnupg git bash && \
@@ -24,7 +24,7 @@ CMD bun install && bun run dev
 # 
 # Production image
 # 
-FROM base as production
+FROM base AS production
 
 COPY . /app
 
