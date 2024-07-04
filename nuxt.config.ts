@@ -21,10 +21,6 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: "bun",
-    compressPublicAssets: true,
-    prerender: {
-      crawlLinks: true,
-    },
   },
   app: {
     head: {
