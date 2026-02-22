@@ -2,6 +2,7 @@ services:
   bun:
     build:
       target: production
+    restart: unless_stopped
     networks:
       - application
 
@@ -9,6 +10,7 @@ services:
     image: redis
     networks:
       - application
+    restart: unless_stopped
     volumes:
       - redis:/data
 

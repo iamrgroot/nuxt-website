@@ -35,10 +35,10 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "shadcn-nuxt",
-    "nuxt-icon",
     "@nuxt/image",
     "@nuxtjs/i18n",
     "@nuxtjs/robots",
+    "@nuxt/icon",
   ],
   hooks: {
     // Fix for hanging build step
@@ -47,8 +47,8 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
-    vueI18n: "./app/utils/i18n.config.ts",
-    experimental: { autoImportTranslationFunctions: true },
+    defaultLocale: "en",
+    locales: ["en"],
   },
   shadcn: {
     componentDir: "./app/components/ui",

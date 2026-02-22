@@ -30,6 +30,19 @@ services:
       traefik.http.services.bun.loadbalancer.server.port: 3000
 ```
 
+Example `docker-compose.override.yml` with local development:
+
+```yml
+services:
+  bun:
+    build:
+      target: local
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+```
+
 ## Production
 
 Just use the `Dockerfile` :)

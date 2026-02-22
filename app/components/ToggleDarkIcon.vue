@@ -6,7 +6,7 @@ const toggleDark = useToggle(isDark);
 </script>
 
 <template>
-  <Button
+  <UiButton
     title="Toggle dark mode"
     variant="ghost"
     class="px-2"
@@ -18,5 +18,5 @@ const toggleDark = useToggle(isDark);
         isDark ? 'material-symbols:light-mode' : 'material-symbols:dark-mode'
       "
     />
-  </Button>
+  </UiButton>
 </template>

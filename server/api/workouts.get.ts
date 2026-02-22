@@ -16,7 +16,9 @@ export default defineCachedEventHandler(
 
     return {
       rideTotal: stats.all_ride_totals.distance,
+      swimTotal: stats.all_swim_totals.distance,
+      runTotal: stats.all_run_totals.distance,
     };
   },
-  { maxAge: 60 * 60 }
+  { maxAge: 60 * 60 },
 );
